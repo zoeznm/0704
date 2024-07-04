@@ -1,7 +1,7 @@
 const root = document.getElementById('root')!;
 
 const anchorTags = (href:string, textNode:string):string => {
-  let result = `<a href="${href}">${textNode}</a>`;
+  let result = `<a href="#${href}">${textNode}</a>`;
   return result;
 }
 
@@ -39,4 +39,11 @@ const totalElement = (object:BasicData):string => {
 root.innerHTML = `
 <ul>
   ${totalElement(basicData)}
-</ul>`;
+</ul>
+<main id="main-target></main>`;
+
+//------------------------------------
+// * HTML을 대신해서 만든 HTML 작성 코드
+// * React, CSR
+
+const mainTarget =document.getElementById('main-target')!;

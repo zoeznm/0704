@@ -2,7 +2,7 @@
 
 var root = document.getElementById('root');
 var anchorTags = function anchorTags(href, textNode) {
-  var result = "<a href=\"".concat(href, "\">").concat(textNode, "</a>");
+  var result = "<a href=\"#".concat(href, "\">").concat(textNode, "</a>");
   return result;
 };
 var basicData = {
@@ -24,4 +24,10 @@ var totalElement = function totalElement(object) {
   }
   return result;
 };
-root.innerHTML = "\n<ul>\n  ".concat(totalElement(basicData), "\n</ul>");
+root.innerHTML = "\n<ul>\n  ".concat(totalElement(basicData), "\n</ul>\n<main id=\"main-target></main>");
+
+//------------------------------------
+// * HTML을 대신해서 만든 HTML 작성 코드
+// * React, CSR
+
+var mainTarget = document.getElementById('main-target');
