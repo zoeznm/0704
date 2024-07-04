@@ -50,5 +50,7 @@ const mainTarget =document.getElementById('main-target')!;
 console.log(window.location.hash);
 
 window.addEventListener('hashchange',()=>{
+  const hash = window.location.hash;
+  console.log(hash.slice(1));
   mainTarget.innerHTML=basicData.jaemin;
 })
