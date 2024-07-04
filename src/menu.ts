@@ -10,7 +10,12 @@ const liTags = (children:string) => {
   return result;
 }
 
+const totalElement = () => {
+  let result = liTags(anchorTags("bomi", "보미"));
+  return result;
+}
+
 root.innerHTML = `
 <ul>
-  ${liTags(anchorTags("보미", "보미"))}
+  ${totalElement()}
 </ul>`;
