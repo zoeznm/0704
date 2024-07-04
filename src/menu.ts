@@ -12,5 +12,5 @@ const liTags = (children:string) => {
 
 root.innerHTML = `
 <ul>
-  ${liTags(anchorTags("#보미", "보미"))}
+  ${liTags(anchorTags("보미", "보미"))}
 </ul>`;
