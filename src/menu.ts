@@ -5,17 +5,32 @@ const anchorTags = (href:string, textNode:string):string => {
   return result;
 }
 
+interface BasicData  {
+  bomi : "보미",
+  jaemin : "재민",
+  ujin : "유진",
+  jiyoon: "지윤",
+}
+
+
+const basicData:BasicData = {
+  bomi : "보미",
+  jaemin : "재민",
+  ujin : "유진",
+  jiyoon: "지윤",
+}
+
 const liTags = (children:string) => {
   let result = `<li>${children}</li>`;
   return result;
 }
 
-const totalElement = () => {
-  let result = liTags(anchorTags("bomi", "보미"));
+const totalElement = (object:BasicData):string => {
+  let result = liTags(anchorTags(`${object.bomi}`,object.bomi));
   return result;
 }
 
 root.innerHTML = `
 <ul>
-  ${totalElement()}
+  ${totalElement(basicData)}
 </ul>`;
