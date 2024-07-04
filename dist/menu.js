@@ -24,10 +24,14 @@ var totalElement = function totalElement(object) {
   }
   return result;
 };
-root.innerHTML = "\n<ul>\n  ".concat(totalElement(basicData), "\n</ul>\n<main id=\"main-target></main>");
+root.innerHTML = "\n<ul id=\"menu\">\n  ".concat(totalElement(basicData), "\n</ul>\n<main id=\"main-target\"></main>");
 
 //------------------------------------
 // * HTML을 대신해서 만든 HTML 작성 코드
 // * React, CSR
 
 var mainTarget = document.getElementById('main-target');
+console.log(window.location.hash);
+window.addEventListener('hashchange', function () {
+  mainTarget.innerHTML = basicData.jaemin;
+});

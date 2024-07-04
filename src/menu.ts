@@ -37,13 +37,18 @@ const totalElement = (object:BasicData):string => {
 }
 
 root.innerHTML = `
-<ul>
+<ul id="menu">
   ${totalElement(basicData)}
 </ul>
-<main id="main-target></main>`;
+<main id="main-target"></main>`;
 
 //------------------------------------
 // * HTML을 대신해서 만든 HTML 작성 코드
 // * React, CSR
 
 const mainTarget =document.getElementById('main-target')!;
+console.log(window.location.hash);
+
+window.addEventListener('hashchange',()=>{
+  mainTarget.innerHTML=basicData.jaemin;
+})
