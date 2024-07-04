@@ -1,6 +1,6 @@
 const root = document.getElementById('root')!;
 
-const anchorTags = () => {
+const anchorTags = ():string => {
   let result = '<a href="#">메뉴</a>';
   return result;
 }
